@@ -7,10 +7,16 @@
 #include <limits.h>
 
 /* struct definition */
+/**
+ * struct print - function selector structure.
+ * @option: character representation for function.
+ * @f: function pointer.
+ * Description: this structure implements functions selector.
+ */
 typedef struct print
 {
-    char *option;
-    int (*f)(va_list);
+	char *option;
+	int (*f)(va_list);
 } print_t;
 /* Prototypes */
 int _putchar(char c);

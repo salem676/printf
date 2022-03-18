@@ -39,6 +39,10 @@ int print_s(va_list args)
 	 * @counter: serves as itself.
 	 * @dummy: ptr to char temp variable.
 	 */
+	if (dummy == NULL)
+	{
+		dummy = "(null)";
+	}
 	while (dummy[counter] != '\0')
 	{
 		_putchar(dummy[counter]);

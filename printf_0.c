@@ -67,16 +67,22 @@ int _printf(const char *format, ...)
 			_putchar(format[index]);
 			counter++;
 			index++;
-	}
+		}
 		print_func = get_print_func(&format[index + 1]);
 		if (format[index] == '%')
 		{
 			if (print_func != NULL)
 			{
 				counter += print_func(arguments);
-				index += 2;
-				continue;
 			}
+			else
+			{
+				_putchar(format[index]);
+				_putchar(format[index + 1]);
+				counter += 2;
+			}
+			index += 2;
+			continue;
 		}
 	}
 	va_end(arguments);
