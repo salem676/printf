@@ -28,28 +28,27 @@ int figuresf(int num)
  * Description: as above.
  * Return: the number of digits that will be printed out.
  */
-int printeger(int num1)
+int printeger(int num)
 {
 	int figures;
-	long int num = num1; 
+	long int num1 = num;
 	/*
 	 * @figures: figures of number.
 	 */
-	figures = figuresf(num);
-	if (num < 0)
+	figures = figuresf(num1);
+	if (num1 < 0)
 	{
 		_putchar('-');
-		num = num * (-1);
+		num1 = num1 * (-1);
 		figures++;
 	}
-	if (num >= 10)
+	if (num1 >= 10)
 	{
-		printeger(num / 10);
+		printeger(num1 / 10);
 	}
-	_putchar((num % 10) + '0');
+	_putchar((num1 % 10) + '0');
 	return (figures);
 }
-
 /**
  * print_i - takes a variadic argument as input and prints it as an integer.
  * @args: a variadic argument to be printed as an integer.
