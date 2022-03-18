@@ -2,7 +2,7 @@
  * File: printf_2.c
  * Author salem676/katiacorona
  */
-#include main.h
+#include "main.h"
 /**
  * figuresf - takes an integer as input and counts the digits.
  * @num: the number taken as input.

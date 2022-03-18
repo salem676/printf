@@ -11,7 +11,7 @@
  * Description: implements putchar with write func.
  * Return: printing of value by write.
  */
-int _putchar(int c)
+int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
@@ -52,7 +52,7 @@ int print_s(va_list args)
  * Description: receives args and prints %.
  * Return: printing by _putchar.
  */
-int print_prc(va_list args)
+int print_prc(va_list __attribute__((unused))args)
 {
 	return (_putchar('%'));
 }
