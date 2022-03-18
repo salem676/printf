@@ -21,20 +21,29 @@ May be composed of zero or more directives: if zero, ordinary characters that ar
 .ce
 \fB_printf("%c %d", name, age);\fR
 
-.TP.B Conversion Specifiers
+.TP
+.B Conversion Specifiers
 
 Characters that specify the type of conversion with which the values will be treated:
-.TP.BR cA type int argument is converted to a type char and written to the standard stream..TP.BR s
+
+.TP
+.BR c
+A type int argument is converted to a type char and written to the standard stream.
+.TP
+.BR s
 A \fIconst char *\fR argument is expected to be a pointer to an array of characters. Characters are written up until a terminating null byte ('\n') is found.     
-.TP.BR d
+.TP
+.BR d
 A type int argument is printed in its signed int format.
 .TP
 .BR i
-A type int argument is converted to decimal notation..TP
+A type int argument is converted to decimal notation.
+.TP
 .BR b
 An unsigned int argument is converted to binary.
 .TP
-.BR rPrints a reversed string.
+.BR r
+Prints a reversed string.
 .SH RETURN VALUE
 Upon successful, \fB_printf()\fR returns the number of characters printed, excluding the terminating null character.
 
