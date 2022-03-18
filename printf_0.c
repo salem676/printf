@@ -72,11 +72,11 @@ int _printf(const char *format, ...)
 		if (format[index] == '%')
 		{
 			if (print_func != NULL)
-			{
 				counter += print_func(arguments);
-			}
 			else
 			{
+				if (format[index + 1] == '\0')
+					return (-1);
 				_putchar(format[index]);
 				_putchar(format[index + 1]);
 				counter += 2;
