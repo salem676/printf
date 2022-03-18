@@ -28,9 +28,10 @@ int figuresf(int num)
  * Description: as above.
  * Return: the number of digits that will be printed out.
  */
-int printeger(int num)
+int printeger(int num1)
 {
 	int figures;
+	long int num = num1; 
 	/*
 	 * @figures: figures of number.
 	 */
